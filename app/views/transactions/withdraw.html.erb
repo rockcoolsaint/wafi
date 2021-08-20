@@ -1,0 +1,14 @@
+<h1>withdrawals</h1>
+
+<%= form_with url: withdraw_user_account_path do |form| %>
+
+  <div class="field">
+    <%= form.label :amount %>
+    <%= form.number_field :amount %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit 'withdraw' %>
+  </div>
+<% end %>
+

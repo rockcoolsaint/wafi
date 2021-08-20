@@ -1,0 +1,20 @@
+<h1>Transfer</h1>
+<h3>Your balance: <%= @account.balance %></h3>
+
+<%= form_with url: transfer_user_account_path, local: true do |form| %>
+
+  <div class="field">
+    <%= form.label :amount %>
+    <%= form.number_field :amount %>
+  </div>
+
+  <div class="field">
+    <%= form.label :receiver_account_number %>
+    <%= form.number_field :receiver_account_number %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit 'Send' %>
+  </div>
+<% end %>
+

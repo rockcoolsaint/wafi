@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Account number:</strong>
+  <%= @account.account_number %>
+</p>
+
+<p>
+  <strong>Balance:</strong>
+  <%= @account.balance %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @account.user_id %>
+</p>
+
+<div>
+  <%= link_to 'withdraw', withdraw_user_account_path(@account) %> |
+  <%= link_to 'deposit', deposit_user_account_path(@account) %> |
+  <%= link_to 'transfer', transfer_page_user_account_path(@account) %>
+</div>
+
+<%= link_to 'Edit', edit_account_path(@account) %> |
+<%= link_to 'Back', accounts_path %>
